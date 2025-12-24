@@ -101,6 +101,19 @@ git clone https://github.com/your-username/VaultIx.git
 
 # 📸 Screenshots
 
+<p align="center">
+  <img src="https://i.ibb.co/BHXLtLcr/Screenshot-2025-12-25-00-40-15-44-22a2c7f3a8f4ee4b0226e06c9e414f66.jpg" width="250"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://i.ibb.co/b5KQKKGF/Screenshot-2025-12-25-00-40-19-11-22a2c7f3a8f4ee4b0226e06c9e414f66.jpg" width="250"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://i.ibb.co/DHysYpSM/Screenshot-2025-12-25-00-43-38-20-22a2c7f3a8f4ee4b0226e06c9e414f66.jpg" width="250"/>
+</p>
+
+<p align="center">
+  <img src="https://i.ibb.co/bM14Mhk6/Screenshot-2025-12-25-00-45-07-32-22a2c7f3a8f4ee4b0226e06c9e414f66.jpg" width="250"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://i.ibb.co/sQSRjBW/Screenshot-2025-12-25-00-45-00-57-22a2c7f3a8f4ee4b0226e06c9e414f66.jpg" width="250"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://i.ibb.co/GfZyjT5m/Screenshot-2025-12-25-00-44-11-12-22a2c7f3a8f4ee4b0226e06c9e414f66.jpg" width="250"/>
+</p>
+
+
 # 👨‍💻 Author
 
 ### Abhishek Dhawan
