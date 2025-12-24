@@ -87,7 +87,7 @@ com.abhishek.vaultIx
 ## 🚀 Getting Started
 
 1️⃣ Clone the repository
-git clone https://github.com/your-username/VaultIx.git
+git clone [https://github.com/Code-Where/VaultIx.git](https://github.com/Code-Where/Valutix.git)
 
 2️⃣ Open in Android Studio
 
