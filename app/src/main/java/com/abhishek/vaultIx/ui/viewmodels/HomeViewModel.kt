@@ -38,6 +38,7 @@ class HomeViewModel @Inject constructor(
 
     init {
         observePasswords()
+        setProcessStatus(HomeProcessState.Idle)
     }
 
     private fun observePasswords() {
@@ -51,11 +52,7 @@ class HomeViewModel @Inject constructor(
                 }
             }
             .catch { e ->
-                _uiState.update {
-                    it.copy(
-                        processState = HomeProcessState.Error(e.message ?: "Unknown error")
-                    )
-                }
+                setProcessStatus(HomeProcessState.Error(e.message ?: "Unknown error"))
             }
             .launchIn(viewModelScope)
     }
@@ -108,33 +105,20 @@ class HomeViewModel @Inject constructor(
 
     fun onSubmit(){
         if (_addPasswordUiState.value.accountName.isEmpty()) {
-            _uiState.update {
-                it.copy(
-                    processState = HomeProcessState.Error("Account name cannot be empty")
-                )
-            }
+            setProcessStatus(HomeProcessState.Error("Account name cannot be empty"))
             return
         }
         if (_addPasswordUiState.value.accountId.isEmpty()) {
-            _uiState.update {
-                it.copy(
-                    processState = HomeProcessState.Error("Account id cannot be empty")
-                )
-            }
+            setProcessStatus(HomeProcessState.Error("Username/Email cannot be empty"))
             return
         }
 
         if (_addPasswordUiState.value.password.isEmpty()) {
-            _uiState.update {
-                it.copy(
-                    processState = HomeProcessState.Error("Password cannot be empty")
-                )
-            }
+            setProcessStatus(HomeProcessState.Error("Password cannot be empty"))
             return
         }
 
         viewModelScope.launch {
-
             val state = _addPasswordUiState.value
 
             if (state.id == null) {
@@ -175,6 +159,14 @@ class HomeViewModel @Inject constructor(
     fun lock(){
         _biometricState.update {
             BiometricState.Locked
+        }
+    }
+
+    fun setProcessStatus(status: HomeProcessState){
+        _uiState.update {
+            it.copy(
+                processState = status
+            )
         }
     }
 

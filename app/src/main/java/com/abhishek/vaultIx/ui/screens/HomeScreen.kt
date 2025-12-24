@@ -75,6 +75,7 @@ fun HomeScreen(
         when(uiState.processState) {
             is HomeProcessState.Error -> {
                 Toast.makeText(context, (uiState.processState as HomeProcessState.Error).message, Toast.LENGTH_SHORT).show()
+                viewModel.setProcessStatus(HomeProcessState.Idle)
             }
             else -> {}
         }

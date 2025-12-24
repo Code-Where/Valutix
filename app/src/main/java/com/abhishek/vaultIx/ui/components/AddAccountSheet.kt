@@ -5,8 +5,11 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -112,19 +115,22 @@ fun AddAccountSheet(
                 singleLine = true,
                 shape = RoundedCornerShape(10.dp),
                 trailingIcon = {
-                    Text(
-                        text = "Generate",
-                        fontSize = 12.sp,
-                        color = white,
-                        fontFamily = sfProDisplayFont,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier
-                            .clickable {
-                                onGeneratePassword()
-                            }
-                            .background(blue, RoundedCornerShape(50.dp))
-                            .padding(vertical = 2.dp, horizontal = 7.dp)
-                    )
+                    Row {
+                        Text(
+                            text = "Generate",
+                            fontSize = 12.sp,
+                            color = white,
+                            fontFamily = sfProDisplayFont,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier
+                                .clickable {
+                                    onGeneratePassword()
+                                }
+                                .background(blue, RoundedCornerShape(50.dp))
+                                .padding(vertical = 2.dp, horizontal = 7.dp)
+                        )
+                        Spacer(modifier = Modifier.width(5.dp))
+                    }
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -133,7 +139,6 @@ fun AddAccountSheet(
                         color = passwordColor,
                         RoundedCornerShape(10.dp)
                     )
-                    .padding(end = 10.dp)
             )
 
             Text(
